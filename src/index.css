@@ -17,3 +17,7 @@
 ::-webkit-scrollbar{
     @apply hidden
 }
+
+.active p{
+   @apply text-white bg-primary
+}

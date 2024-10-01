@@ -1,5 +1,6 @@
 import React from 'react'
 import { assets } from '../assets/assets_frontend/assets'
+import { NavLink } from 'react-router-dom'
 
 const Footer = () => {
   return (
@@ -15,10 +16,10 @@ const Footer = () => {
             <div>
                 <p className='text-xl font-medium mb-5'>COMPANY</p>
                 <ul className='flex flex-col gap-2 text-gray-600'>
-                    <li>Home</li>
-                    <li>About Us</li>
-                    <li>Contact Us</li>
-                    <li>Privacy Policy</li>
+                    <NavLink to='/'>Home</NavLink>
+                    <NavLink to='/about'>About Us</NavLink>
+                    <NavLink to='contact'>Contact Us</NavLink>
+                    <NavLink>Privacy Policy</NavLink>
                 </ul>
             </div>
 
@@ -26,8 +27,8 @@ const Footer = () => {
             <div>
                 <p className='text-xl font-medium mb-5'>GET IN TOUCH</p>
                 <ul className='flex flex-col gap-2 text-gray-600'>
-                    <li>+91 80531-80025</li>
-                    <li>help@prescripto.com</li>
+                    <li>(805) 318 0025</li>
+                    <li>contact@prescripto.com</li>
                 </ul>
             </div>
         </div>

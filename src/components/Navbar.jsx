@@ -11,7 +11,7 @@ const Navbar = () => {
     // when we have token true, we are logged in, else logged out
 
   return (
-    <div className='flex items-center justify-between text-sm py-4 mb-5 border-b border-b-gray-400 '>
+    <div className='flex items-center justify-between text-sm py-4 mb-5 border-b border-b-gray-400'>
         <img onClick={() => navigate('/')}
             src={assets.logo} alt="" className='w-44 cursor-pointer'/>
         <ul className='hidden md:flex items-start gap-5 font-medium'>
@@ -48,9 +48,23 @@ const Navbar = () => {
                         </div>
                     </div>
                 </div> 
-                : <button onClick={() => navigate('/login')}
-                className='px-8 py-2 bg-primary text-white rounded-full font-light hidden md:block'>Create Account</button> 
+                : <button onClick={() => navigate('/login')} className='px-8 py-2 bg-primary text-white rounded-full font-light hidden md:block'>Create Account</button> 
             } 
+            {/* menu icon for small screens  */}
+            <img onClick={() => setShowMenu(true)} src={assets.menu_icon} alt="" className='w-6 md:hidden'/>
+            <div className={`${showMenu ? 'fixed w-full' : 'h-0 w-0'} md:hidden right-0 top-0 bottom-0 z-20 overflow-hidden bg-white transition-all`}>
+                <div className='flex items-center justify-between px-5 py-6'>
+                    <img src={assets.logo} alt="" className='w-36' />
+                    <img src={assets.cross_icon} alt="" onClick={() => setShowMenu(false)} className='w-7'/> 
+                </div>
+                <ul className='flex flex-col items-center gap-2 mt-5 px-5 text-lg font-medium'>
+                    <NavLink to='/' onClick={() => setShowMenu(false)}><p className='px-4 py-2 rounded inline-block hover:bg-primary hover:text-white'>HOME</p></NavLink>
+                    <NavLink to='/doctors' onClick={() => setShowMenu(false)}><p className='px-4 py-2 rounded inline-block hover:bg-primary hover:text-white'>ALL DOCTORS</p></NavLink>
+                    <NavLink to='/about' onClick={() => setShowMenu(false)}><p className='px-4 py-2 rounded inline-block hover:bg-primary hover:text-white'>ABOUT</p></NavLink>
+                    <NavLink to='/contact' onClick={() => setShowMenu(false)}><p className='px-4 py-2 rounded inline-block hover:bg-primary hover:text-white '>CONTACT</p></NavLink>
+                </ul>
+                {/* added media query that if it is active then bg change */}
+            </div>
         </div>
     </div>
   )

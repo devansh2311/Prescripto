@@ -7,8 +7,8 @@ const SpecialityMenu = () => {
     // added speciality in id so that when <a/> tag in header is clicked, it reaches this section 
     <div id='speciality' className='flex flex-col items-center gap-4 py-16 text-gray-800 '>
         <h1 className='text-3xl font-medium'>Find By Speciality</h1>
-        <p className='w-1/3 text-center text-sm'>Simply browse through our extensive list of trusted doctors, schedule your appointment hassle-free.</p>
-        <div className='flex justify-center gap-4 pt-5 w-full overflow-scroll '>
+        <p className='sm:w-1/3 text-center text-sm'>Simply browse through our extensive list of trusted doctors, schedule your appointment hassle-free.</p>
+        <div className='flex sm:justify-center gap-4 pt-5 w-full overflow-x-auto'>
             {specialityData.map((item, index) => (
                 <Link onClick={() => scrollTo(0,0)}
                 className='flex flex-col items-center text-xs cursor-pointer flex-shrink-0 hover:translate-y-[-10px] translation-all duration-500' 
