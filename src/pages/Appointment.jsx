@@ -114,7 +114,7 @@ const Appointment = () => {
       </div>
 
       {/* --------------------- booking slots----------------- */}
-      <div className='sm:ml-96 sm:pl-11 mt-4 font-medium text-gray-700'>
+      <div className='sm:ml-72 sm:pl-4 mt-4 font-medium text-gray-700'>
         <p>Booking Slots</p>
         <div className='flex gap-3 items-center w-full overflow-x-scroll mt-4'>
           {
