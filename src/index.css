@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+/* imported outfit font */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    font-family: Outfit;
+}
+
+/* whenever the navlink is active, the hidden changes to display */
+.active hr{ 
+    @apply block 
+}
+
+::-webkit-scrollbar{
+    @apply hidden
+}
